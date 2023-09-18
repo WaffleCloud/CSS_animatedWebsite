@@ -1,0 +1,280 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    transition: all 0.5s ease-in-out;
+    font-family: "Poppins", sans-serif;
+    color: rgb(38, 38, 38);
+    font-weight: 200;
+}
+
+a {
+    text-decoration: none;
+}
+
+.arrow {
+    border: solid rgb(38, 38, 38);
+    border-width: 0 12px 12px 0;
+    padding: 12px;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes bounceLeft{
+    0%,
+    20%,
+    50%,
+    100%{
+        transform: translateX(0), rotate(135deg)
+    }
+    40%{
+        transform: translateX(-30px), rotate(135deg)
+    }
+    60%{
+        transform: translateX(-50px), rotate(135deg)
+    }
+}
+
+@keyframes bounceRight{
+    0%,
+    20%,
+    50%,
+    100%{
+        transform: translateX(0), rotate(-45deg);
+    }
+    40%{
+        transform: translateX(-30px), rotate(-45deg);
+    }
+    60%{
+        transform: translateX(-50px), rotate(-45deg);
+    }
+}
+
+.box {
+    padding: 10px;
+}
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: stretch;
+}
+
+@keyframes fanCoding {
+        0% {
+            transform: rotate(0deg);
+            right: 0;
+            top: 0;
+        }
+        100% {
+            transform: rotate(-60deg);
+            right: 130;
+            top: -20;
+        } 
+}
+
+@keyframes fanEmail {
+    0% {
+        transform: rotate(0deg);
+        right: 0;
+        top: 0;
+    }
+    100% {
+        transform: rotate(-40deg);
+        right: 100;
+        top: -16;
+    }
+    
+}
+
+@keyframes fanInstagram {
+    0% {
+        transform: rotate(0deg);
+        right: 0;
+        top: 0;
+    }
+    100% {
+        transform: rotate(-20deg);
+        right: 40;
+        top: -12;
+    }
+    
+}
+
+.hidden {
+    display: none;
+}
+
+.hidden-pill {
+    height: 100%;
+    width: 100%;
+    border: solid 12px rgb(38, 38, 38);
+    box-sizing: border-box;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.input-container {
+    position: absolute;
+    bottom: 50px;
+    left: 102px;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    z-index: 2;
+}
+
+.large-box {
+    min-height: 500px;
+    min-width: 410px;
+    flex-grow: 2;
+    background-color: green;
+}
+
+.left-expand-arrow {
+    margin-right: 60px;
+    animation: bounceLeft 3s infinite;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .logo-container img {
+    width: 100%;
+} */
+
+.long-box {
+    min-height: 150px;
+    min-width: 500px;
+    flex-grow: 4;
+    background-color: blue;
+}
+
+.pill {
+    height: 100%;
+    width: 100%;
+    border: solid 12px rgb(38,38,38);
+    box-sizing: border-box;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-expand-arrow {
+    animation: bounceRight 3s infinite;
+}
+
+.rotating-icon {
+    animation: rotate 10s infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg)
+    },
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.slider-container {
+    min-height: 500px;
+    width: 150px;
+    position: relative;
+}
+
+.slider-container input {
+    -webkit-appearance: none;
+    width: 420px;
+    height: 20px;
+    background-color: rgba(18,9,9, 0.6);
+    border-radius: 5px;
+}
+
+.slider-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgb(255,255,255);
+    border: rgb(38,38,38) solid 14px;
+    cursor: grab;
+    z-index: 3;
+}
+
+.small-box {
+    min-height: 150px;
+    min-width: 250px;
+    flex-grow: 1;
+    background-color: red;
+}
+
+.social-fan {
+    position: relative;
+}
+
+.social-fan:hover .coding-tips {
+    display: block;
+    animation: fanCoding 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.social-fan:hover .instagram{
+    display: block;
+    animation: fanInstagram 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.social-fan:hover .email {
+    display: block;
+    animation: fanEmail 1s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.social-fan .social {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform-origin: top right;
+    z-index: 10;
+}
+
+.x-box {
+    position: relative;
+    min-height: 500px;
+    min-width: 410px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.x-box img {
+    transform: scale(0.95)
+}
+
+.x-box p {
+    position: absolute;
+    top: 40%;
+    z-index: 10;
+    display: none;
+}
+
+.x-box:hover p {
+    display: block;
+}
+
+
+
+
+
+
