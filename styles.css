@@ -135,6 +135,27 @@ body {
     background-color: green;
 }
 
+.large-box:hover {
+    flex-grow: 10 !important;
+}
+
+.large-box .text-box {
+    max-width: 300px;
+}
+
+.large-box .text-box p {
+    font-size: 18px;
+    color: rgb(red)
+}
+
+.large-box .text-box a {
+    font-size: 18px;
+}
+
+.large-box:hover .text-box {
+    display: block;
+}
+
 .left-expand-arrow {
     margin-right: 60px;
     animation: bounceLeft 3s infinite;
@@ -217,6 +238,10 @@ body {
     background-color: red;
 }
 
+.small-box.stretchable:hover .hidden{
+    display: block;
+}
+
 .social-fan {
     position: relative;
 }
@@ -245,6 +270,18 @@ body {
     right: 0;
     transform-origin: top right;
     z-index: 10;
+}
+
+.stretchable:hover{
+    flex-grow: 5 !important;
+}
+
+#takeover:hover .arrow-container{
+    display: none;
+}
+
+#takeover:hover ~ #squish {
+    min-width: 0;
 }
 
 .x-box {
