@@ -23,6 +23,7 @@ a {
 body {
     padding: 0;
     margin: 0;
+    display: flex;
 }
 
 @keyframes bounceLeft{
@@ -30,13 +31,13 @@ body {
     20%,
     50%,
     100%{
-        transform: translateX(0), rotate(135deg)
+        transform: translateX(0) rotate(135deg)
     }
     40%{
-        transform: translateX(-30px), rotate(135deg)
+        transform: translateX(-30px) rotate(135deg)
     }
     60%{
-        transform: translateX(-50px), rotate(135deg)
+        transform: translateX(-50px) rotate(135deg)
     }
 }
 
@@ -45,13 +46,12 @@ body {
     20%,
     50%,
     100%{
-        transform: translateX(0), rotate(-45deg);
+        transform: translateX(0) rotate(-45deg);
     }
     40%{
-        transform: translateX(-30px), rotate(-45deg);
+        transform: translateX(-30px) rotate(-45deg);
     }
     60%{
-        transform: translateX(-50px), rotate(-45deg);
     }
 }
 
@@ -108,6 +108,20 @@ body {
 
 .hidden {
     display: none;
+}
+
+.hidden-box {
+    height: auto;
+    width: 0;
+    background-color: rgb(222,222,222);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hidden-box .text-box {
+    margin: 30px;
 }
 
 .hidden-pill {
@@ -194,13 +208,13 @@ body {
 }
 
 .rotating-icon {
-    animation: rotate 10s infinite;
+    animation: rotate 10s infinite ease-in-out;
 }
 
 @keyframes rotate {
     0% {
         transform: rotate(0deg)
-    },
+    }
     100% {
         transform: rotate(360deg)
     }
@@ -309,8 +323,6 @@ body {
 .x-box:hover p {
     display: block;
 }
-
-
 
 
 
